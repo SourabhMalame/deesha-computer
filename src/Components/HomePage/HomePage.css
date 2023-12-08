@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.col-lg-12 {
+  padding: 30px;
+  font-family: poppins;
+  width: 100%;
+}
+
+.main-containt {
+  display: flex;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.f-c-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+  padding-left: 70px;
+
+  position: relative;
+}
+
+.f-c-image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+}
+.f-c-image-1 {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+p,
+span,
+b,
+i,
+strong {
+  font-size: 16px;
+}
+
+.circle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 100%; /* Set larger width/height to cover entire container */
+  height: 100%; /* Set larger width/height to cover entire container */
+  background-color: rgba(
+    115,
+    248,
+    228,
+    0.9
+  ); /* Adjust the overlay color and transparency */
+  clip-path: circle(50% at 10%);
+  /* opacity: 10%;
+  box-sizing: border-box; */
+}

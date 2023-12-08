@@ -1,0 +1,71 @@
+{
+  "students": [
+    {
+      "id": 1
+    },
+    {
+      "firstName": "sourabh",
+      "middleName": null,
+      "lastName": "Malame",
+      "dateOfBirth": null,
+      "password": null,
+      "confirmPassword": null,
+      "email": null,
+      "course": null,
+      "courseStartDate": null,
+      "courseEndDate": null,
+      "aadharCardNumber": null,
+      "phoneNumber": null,
+      "education": null,
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "firstName": "Sourabh ",
+      "middleName": null,
+      "lastName": "Malame",
+      "dateOfBirth": null,
+      "confirmPassword": "123456",
+      "email": "sourabhmalame@gmail.com",
+      "course": null,
+      "courseStartDate": null,
+      "courseEndDate": null,
+      "aadharCardNumber": null,
+      "phoneNumber": null,
+      "education": null,
+      "id": 5,
+      "password": "123456"
+    },
+    {
+      "firstName": "sourabh",
+      "middleName": null,
+      "lastName": "malme",
+      "dateOfBirth": null,
+      "password": "123456",
+      "confirmPassword": "123456",
+      "email": "sourabhmalame11@gmail.com",
+      "course": "Mern Stack",
+      "courseStartDate": null,
+      "courseEndDate": null,
+      "aadharCardNumber": null,
+      "phoneNumber": null,
+      "education": "Graduation",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "admins": {
+    "name": "typicode"
+  }
+}
