@@ -40,7 +40,7 @@ const HomePage = () => {
 
             <main className="mt-4 ">
                 <div className="jumbotron">
-                    <h1 className="display-4">Welcome To Deesha Computers! Where Quality Matters...</h1>
+                    <h1 className="display-4 fw-bold">Welcome To Deesha Computers! Where Quality Matters...</h1>
                     <p className="lead">
                         Providing quality education for all learners.
                         <br />
@@ -50,8 +50,6 @@ const HomePage = () => {
 
                         <b>Join us on a journey towards a rewarding and successful career in IT!</b>
                     </p>
-
-
                 </div>
             </main>
             <hr className="my-4" />

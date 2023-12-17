@@ -1,12 +1,17 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
 
     let dispatch = useDispatch();
     let state = useSelector(state => state.user)
     console.log(state.logindata);
+    let navigate = useNavigate()
 
     let readData = (event) => {
 
@@ -16,6 +21,8 @@ const Login = () => {
         dispatch({ type: "LOGIN_DATA", payload: { name: name, value: value } })
 
     }
+    let loginUser = () => toast.success("Login Successfull")
+
 
     let CheakUser = () => {
         axios.get(`http://localhost:8000/students/?email=${state.logindata.email}&password=${state.logindata.password}`)
@@ -24,7 +31,10 @@ const Login = () => {
                 if (res.data == "") {
                     window.alert("User Not Found");
                 } else {
-                    window.alert("User Found");
+                    loginUser();
+                    setInterval(() => {
+                        navigate("/courses")
+                    }, 3000)
                 }
             })
             .catch(err => {
@@ -37,19 +47,21 @@ const Login = () => {
 
     return (
         <section className="bg-light">
+            <ToastContainer position="top-center" />
+
             <div className="container p-5 h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-xl-10">
                         <div className="card rounded-3 text-black">
                             <div className="row g-0">
                                 <div className="col-lg-6">
-                                    <div className="card-body p-md-5 mx-md-4">
+                                    <div className=" card-body p-md-5 mx-md-4">
                                         <div className="text-center">
                                             <img className='col-3' src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                                                 alt="logo" />
                                             <h4 className="mt-1 mb-5 pb-1">We are The Deesha Team</h4>
                                         </div>
-                                        <form>
+                                        <form >
                                             <p className='mb-4'>Please login to your account</p>
 
                                             <div className="form-outline mb-3">
@@ -61,7 +73,7 @@ const Login = () => {
                                             </div>
 
                                             <div className="text-center d-flex justify-content-between pt-1 mb-5 pb-1">
-                                                <button className="btn btn-primary col-5 rounded-pill" type="button" onClick={CheakUser}>Login</button>
+                                                <button className="btn btn-primary col-5 rounded-pill small" type="button" onClick={CheakUser}>Login</button>
 
                                                 <a className="text-muted small" href="/forgotpassword">Forgot password?</a>
                                             </div>
@@ -71,7 +83,14 @@ const Login = () => {
                                                 <a class="btn btn-primary col-6 rounded-pill" href="/register" role="button">Create New</a>
 
                                             </div>
+
                                         </form>
+                                        <hr />
+
+                                        <div className="col-12">
+                                            <a href='/adminlogin' className='btn btn-primary rounded-pill small col-12'>Admin Login</a>
+
+                                        </div>
 
                                     </div>
                                 </div>

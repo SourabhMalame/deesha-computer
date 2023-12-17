@@ -1,43 +1,60 @@
+import axios from 'axios';
 import React from 'react';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
+    let dispatch = useDispatch();
+    let state = useSelector(state => state.user)
+    let navigate = useNavigate();
+
+    let readData = (event) => {
+        let { name, value } = event.target;
+
+        dispatch({ type: "ADMIN_LOGIN", payload: { name: name, value: value } })
+    }
+
+    let adminLoginToast = () => toast.success("Login SuccessFull")
+    let cheackAdmin = () => {
+
+        axios.get(`http://localhost:8000/admins/?email=${state.admin.username}&password=${state.admin.password}`)
+            .then(res => {
+                console.log(JSON.stringify(res, null, 3))
+                if (res.data == "") {
+                    window.alert("User Not Found");
+                } else {
+                    adminLoginToast();
+                    setInterval(() => {
+                        navigate('/admindashboard');
+                    },4000)
+
+                }
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+    }
     return (
-        <Container className="m-5">
-            <Row className="justify-content-center">
-                <Col md={6}>
-                    <Card className="shadow">
-                        <Card.Header className="bg-primary text-white text-center">
-                            <h3>Admin Login</h3>
-                        </Card.Header>
-                        <Card.Body>
-                            <Form>
-                                <Form.Group className="mb-3" controlId="formUsername">
-                                    <Form.Label>Username</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter your username" />
-                                </Form.Group>
 
-                                <Form.Group className="mb-3" controlId="formPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Enter your password" />
-                                </Form.Group>
 
-                                <Form.Group className="mb-3" controlId="formPassword">
-                                    <Form.Label>AdminKey</Form.Label>
-                                    <Form.Control type="Adminkey" placeholder="Enter your Admin key" />
-                                </Form.Group>
+        <div className="row bg-light p-5">
+            <ToastContainer position='top-center' />
+            <div className="col-lg-5 mx-auto border bg-white rounded p-2">
 
-                                <div className="d-grid gap-2">
-                                    <Button variant="primary" size="lg">
-                                        Login
-                                    </Button>
-                                </div>
-                            </Form>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+                <p className="h1">Admin Login</p>
+                <hr />
+                <input className='col-11 m-3 p-1 ' type="text" placeholder='Enter Email' name='username' onChange={readData} />
+                <br />
+                <input className='col-11 m-3 p-1' type="text" placeholder='Enter Password' name='password' onChange={readData} />
+                <br />
+                <input className='col-11 m-3 p-1' type="text" placeholder='admin key' name='adminkey' onChange={readData} />
+                <button onClick={cheackAdmin} className='btn btn-primary col-4 m-3'>Login</button>
+            </div>
+        </div>
+
     );
 };
 

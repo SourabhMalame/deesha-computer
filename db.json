@@ -56,16 +56,69 @@
       "phoneNumber": null,
       "education": "Graduation",
       "id": 6
+    },
+    {
+      "firstName": "vishal",
+      "middleName": "hanmant",
+      "lastName": "borate",
+      "dateOfBirth": "1998-01-23",
+      "password": "54321",
+      "confirmPassword": "54321",
+      "email": "vishal@gmail.com",
+      "course": "C Language",
+      "courseStartDate": "2023-09-01",
+      "courseEndDate": "2023-12-31",
+      "aadharCardNumber": "123456789111",
+      "phoneNumber": "0123456789",
+      "education": "Graduation",
+      "id": 7
+    },
+    {
+      "firstName": "Sourabh",
+      "middleName": "Papa",
+      "lastName": "Malame",
+      "dateOfBirth": "2001-08-13",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "email": "sourabhmalame2001@gmail.com",
+      "course": "Python Data Analyist",
+      "courseStartDate": "2023-12-01",
+      "courseEndDate": "2024-06-30",
+      "aadharCardNumber": "707407194639",
+      "phoneNumber": "9529023073",
+      "education": "Graduation",
+      "id": 8
+    },
+    {
+      "firstName": "Sourabh",
+      "middleName": "Papa",
+      "lastName": "Malame",
+      "dateOfBirth": "2023-12-15",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "email": "sourabhmalame@gmail.com",
+      "course": "Mern Stack",
+      "courseStartDate": "2023-12-23",
+      "courseEndDate": "2023-12-30",
+      "aadharCardNumber": "7028321255",
+      "phoneNumber": "9529023073",
+      "education": "Graduation",
+      "id": 9
     }
   ],
-  "comments": [
+  "messages": [
     {
       "id": 1,
       "body": "some comment",
       "postId": 1
     }
   ],
-  "admins": {
-    "name": "typicode"
-  }
+  "admins": [
+    {
+      "username": "Admin",
+      "password": "Admin",
+      "adminkey": "Admin",
+      "id": 1
+    }
+  ]
 }

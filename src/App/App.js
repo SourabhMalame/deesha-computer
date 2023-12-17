@@ -29,7 +29,7 @@ function App() {
           <Route path='/adminlogin' element={<AdminLogin />} />
           <Route path='/admindashboard' element={<AdminDashboard />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
-
+          
         </Routes>
       </BrowserRouter>
       <Footer />

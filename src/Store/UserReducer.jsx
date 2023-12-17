@@ -27,6 +27,11 @@ let initialState = {
         email: null,
         password: null,
 
+    },
+    admin: {
+        username: null,
+        password: null,
+        adminkey: null
     }
 
 }
@@ -56,6 +61,16 @@ let UserReducer = (state = initialState, action) => {
             ...state,
             forgotpass: {
                 ...state.forgotpass, [payload.name]: payload.value, status: payload.status
+            }
+        }
+
+    }
+
+    else if (type === "ADMIN_LOGIN") {
+        state = {
+            ...state,
+            admin: {
+                ...state.admin, [payload.name]: payload.value
             }
         }
 

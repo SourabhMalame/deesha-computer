@@ -2,11 +2,16 @@ import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const StaticForm = () => {
 
     let dispatch = useDispatch();
     let state = useSelector(state => state.user)
+    let navigate = useNavigate()
 
     let readData = (event) => {
 
@@ -15,12 +20,18 @@ const StaticForm = () => {
         dispatch({ type: "REGISTRATION_DATA", payload: { name: name, value: value } })
 
     }
+    const UserRgistered = () => toast.success("Login SuccessFul");
 
     let addUser = () => {
 
         axios.post("http://localhost:8000/students", state.feilds)
             .then(res => {
                 console.log(res)
+                setInterval(() => {
+                    navigate('/login');
+                    UserRgistered();
+                }, 4000)
+
             }).catch(err => {
                 console.log(err, null, 3)
             })
@@ -30,6 +41,7 @@ const StaticForm = () => {
 
     return (
         <Form className='row bg-light col-12 '>
+            <ToastContainer position="Top-center" />
             <div className="div p-5">
                 {JSON.stringify(state, null, 3)}
             </div>
