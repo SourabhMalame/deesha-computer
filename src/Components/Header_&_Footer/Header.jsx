@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light pl-4">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark pl-4">
                 <div className="container d-flex justify-content-around">
                     <a className="navbar-brand fw-bold" href="/">
                         Deesha Computers
@@ -24,7 +24,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav small">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">
+                                <a className="nav-link active"  href="/">
                                     Home
                                 </a>
                             </li>

@@ -3,6 +3,9 @@ import '../HomePage/HomePage.css'
 import cardImg1 from "./HomePage Images/Card/Blue and White Illustration Social Media Marketing Facebook Post.jpg"
 import { Card } from 'react-bootstrap';
 import userImg from './HomePage Images/Placed images/Palced Usaer.jpg'
+import HI1 from './HomePage Images/Horizontal Image 1.jpg'
+import HI2 from './HomePage Images/Horozontal Imge 2.jpg'
+import HI3 from './HomePage Images/Horizontal Image 3.jpg'
 
 
 const HomePage = () => {
@@ -36,8 +39,10 @@ const HomePage = () => {
     return (
 
         <div className="container">
+            <div className="project-info">
+                <h1 className='fs-6 border p-3 m-3 text-center heading-me rounded'>Made By Sourabh Malame</h1>
 
-
+            </div>
             <main className="mt-4 ">
                 <div className="jumbotron">
                     <h1 className="display-4 fw-bold">Welcome To Deesha Computers! Where Quality Matters...</h1>
@@ -64,7 +69,7 @@ const HomePage = () => {
                         <div className="card">
                             <img src={cardImg1} className="card-img-top" alt="Card 1" />
                             <div className="card-body">
-                                <span class="badge bg-secondary m-2">Most Trending</span>
+                                <span className="badge bg-secondary m-2">Most Trending</span>
 
                                 <h5 className="card-title">Java Full Stack Course</h5>
                                 <p className="card-text">
@@ -78,7 +83,7 @@ const HomePage = () => {
                         <div className="card">
                             <img src={cardImg1} className="card-img-top" alt="Card 2" />
                             <div className="card-body">
-                                <span class="badge bg-secondary m-2">Most Trending</span>
+                                <span className="badge bg-secondary m-2">Most Trending</span>
 
                                 <h5 className="card-title">Python Full stack / Data Analysis</h5>
                                 <p className="card-text">
@@ -92,7 +97,7 @@ const HomePage = () => {
                         <div className="card">
                             <img src={cardImg1} className="card-img-top" alt="Card 3" />
                             <div className="card-body">
-                                <span class="badge bg-secondary m-2">Most Trending</span>
+                                <span className="badge bg-secondary m-2">Most Trending</span>
 
                                 <h5 className="card-title">MERN / MEAN Stack Course</h5>
                                 <p className="card-text">
@@ -108,7 +113,7 @@ const HomePage = () => {
                         <div className="card">
                             <img src={cardImg1} className="card-img-top" alt="Card 1" />
                             <div className="card-body">
-                                <span class="badge bg-secondary m-2">Most Trending</span>
+                                <span className="badge bg-secondary m-2">Most Trending</span>
 
                                 <h5 className="card-title">Java Full Stack Course</h5>
                                 <p className="card-text">
@@ -122,7 +127,7 @@ const HomePage = () => {
                         <div className="card">
                             <img src={cardImg1} className="card-img-top" alt="Card 2" />
                             <div className="card-body">
-                                <span class="badge bg-secondary m-2">Most Trending</span>
+                                <span className="badge bg-secondary m-2">Most Trending</span>
 
                                 <h5 className="card-title">Python Full stack / Data Analysis</h5>
                                 <p className="card-text">
@@ -136,7 +141,7 @@ const HomePage = () => {
                         <div className="card">
                             <img src={cardImg1} className="card-img-top" alt="Card 3" />
                             <div className="card-body">
-                                <span class="badge bg-secondary m-2">Most Trending</span>
+                                <span className="badge bg-secondary m-2">Most Trending</span>
 
                                 <h5 className="card-title">MERN / MEAN Stack Course</h5>
                                 <p className="card-text">
@@ -206,39 +211,39 @@ const HomePage = () => {
             <hr className='my-4' />
 
             <div className="Accordian mb-4">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div className="accordion" id="accordionExample">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header">
+                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Career-Oriented Training
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
                                 Deesha Computer might focus on providing career-oriented training programs that align with industry demands. This could include courses on software development, IT infrastructure, programming languages, cybersecurity, data analytics, or other areas relevant to the technology industry. These courses might emphasize practical skills, hands-on projects, and certifications that enhance employability.
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                 Job Placement & Assistance:
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                        <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
                                 A significant aspect could involve helping students or participants secure job placements or internships after completing their courses. This could include career counseling, resume building, interview preparation, networking opportunities, and connections with industry partners or companies to facilitate job placements. Providing ongoing support and guidance in the job search process could be a vital feature.
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                 Technology Infrastructure and Resources
                             </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                        <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
                                 Deesha Computer might boast modern infrastructure and resources necessary for effective learning in technology-related fields. This could include state-of-the-art computer labs, access to industry-standard software and tools, a well-stocked library or online resources, and possibly partnerships with tech companies to provide students with exposure to real-world applications and technologies.
                             </div>
                         </div>

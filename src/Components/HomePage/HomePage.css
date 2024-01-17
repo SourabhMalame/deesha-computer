@@ -82,3 +82,10 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.heading-me:hover {
+  background-image: linear-gradient(
+    rgb(15, 228, 247),
+    rgba(255, 0, 221, 0.929)
+  );
+  border: 3px dashed;
+}

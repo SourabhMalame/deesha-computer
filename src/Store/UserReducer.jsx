@@ -32,7 +32,14 @@ let initialState = {
         username: null,
         password: null,
         adminkey: null
-    }
+    },
+    adminDashUser: {},
+    massages: {
+        msg: null,
+        name: null,
+        email: null
+    },
+    student: null
 
 }
 
@@ -74,6 +81,32 @@ let UserReducer = (state = initialState, action) => {
             }
         }
 
+    }
+
+    else if (type === "ALL_STUD_DATA") {
+        state = {
+            ...state,
+            adminDashUser: {
+                ...state.adminDashUser, payload
+            }
+
+        }
+    }
+
+    else if (type === "READ_MSG") {
+        state = {
+            ...state,
+            massages: {
+                ...state.massages, [payload.name]: payload.value
+            }
+        }
+    }
+
+    else if (type === "NUMBER_OF_STUD") {
+        state = {
+            ...state,
+            student: payload
+        }
     }
     return state;
 }

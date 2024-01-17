@@ -19,7 +19,7 @@ const AdminLogin = () => {
     let adminLoginToast = () => toast.success("Login SuccessFull")
     let cheackAdmin = () => {
 
-        axios.get(`http://localhost:8000/admins/?email=${state.admin.username}&password=${state.admin.password}`)
+        axios.get(`http://localhost:8000/admins/?email=${state.admin.username}&password=${state.admin.password}&adminkey=${state.admin.adminkey}`)
             .then(res => {
                 console.log(JSON.stringify(res, null, 3))
                 if (res.data == "") {
@@ -28,7 +28,7 @@ const AdminLogin = () => {
                     adminLoginToast();
                     setInterval(() => {
                         navigate('/admindashboard');
-                    },4000)
+                    }, 3000)
 
                 }
             })

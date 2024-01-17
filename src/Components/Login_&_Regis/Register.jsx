@@ -26,26 +26,22 @@ const StaticForm = () => {
 
         axios.post("http://localhost:8000/students", state.feilds)
             .then(res => {
-                console.log(res)
+                UserRgistered();
                 setInterval(() => {
                     navigate('/login');
-                    UserRgistered();
-                }, 4000)
+                }, 3000)
 
             }).catch(err => {
                 console.log(err, null, 3)
             })
     }
 
-
-
     return (
+      
         <Form className='row bg-light col-12 '>
-            <ToastContainer position="Top-center" />
-            <div className="div p-5">
-                {JSON.stringify(state, null, 3)}
-            </div>
-            <div className="div col-8 mx-auto bg-white p-5 rounded border  ">
+            <ToastContainer position="top-center" />
+
+            <div className="div col-8 mx-auto bg-white p-5 rounded border my-5  ">
 
                 <h3 className='mb-3'>Register Here with deesha computer</h3>
 
@@ -168,6 +164,7 @@ const StaticForm = () => {
 
             </div>
         </Form>
+      
     );
 };
 

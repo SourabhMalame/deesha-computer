@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className="bg-light text-dark p-4 small">
+        <footer className="bg-dark text-white p-4 small">
 
 
             <div className="container">
@@ -34,7 +34,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr className="mt-2 mb-3" />
-                <div className="text-center bg-light ">
+                <div className="text-center">
                     <p>&copy; {new Date().getFullYear()} Deesha Computer. All Rights Reserved.</p>
                 </div>
             </div>
